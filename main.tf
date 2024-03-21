@@ -20,14 +20,6 @@ resource "digitalocean_database_firewall" "firewall" {
   }
 }
 #---------------------------------------------#
-#Description : adding users to database.
-#---------------------------------------------#
-resource "digitalocean_database_user" "user" {
-  for_each   = var.database_users
-  cluster_id = digitalocean_database_cluster.redis_main.id
-  name       = each.key
-}
-#---------------------------------------------#
 #Description : creating main database.
 #---------------------------------------------#
 resource "digitalocean_database_cluster" "redis_main" {

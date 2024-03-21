@@ -43,9 +43,3 @@ variable "firewall_rules" {
   default     = []
   description = "List of trusted sources associated with the cluster."
 }
-
-variable "database_users" {
-  type        = set(string)
-  default     = []
-  description = "List of users."
-}

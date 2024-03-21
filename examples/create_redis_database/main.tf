@@ -7,6 +7,5 @@ module "Digitalocean_redis" {
   region                = "nyc1"
   redis_main_node_count = 1
   common_tags           = ["production"]
-  database_users        = ["Admin", "Mark", "Robert"]
   firewall_rules        = ["192.168.0.1", "192.168.0.2", "192.168.0.8"]
 }
