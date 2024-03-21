@@ -1,5 +1,5 @@
 module "Digitalocean_redis" {
-  source                = "github.com/opsd-io/terraform-module-digitalocean-mysql?ref=1-create-redis-terraform-module"
+  source                = "github.com/opsd-io/terraform-module-digitalocean-redis?ref=1-create-redis-terraform-module"
   databasename          = "example-redis-cluster"
   engine                = "redis"
   version_of_engine     = "7"
