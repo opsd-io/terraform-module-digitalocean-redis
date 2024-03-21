@@ -15,13 +15,13 @@ What does the module provide?
 ## Usage
 
 ```hcl
-module "terraform-module-digitalocean-mysql" {
-  source  = "github.com/opsd-io/terraform-module-digitalocean-mysql/?ref=v0.0.1"
+module "terraform-module-digitalocean-redis" {
+  source  = "github.com/opsd-io/terraform-module-digitalocean-redis"
 
   # Variables
-  databasename          = "example-mysql-cluster"
-  engine                = "mysql"
-  version_of_engine     = "8"
+  databasename          = "example-redis-cluster"
+  engine                = "redis"
+  version_of_engine     = "7"
   mysql_main_size       = "db-s-1vcpu-1gb"
   region                = "nyc1"
   mysql_main_node_count = 1

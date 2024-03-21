@@ -1,4 +1,4 @@
-module "Digitalocean_mysql" {
+module "Digitalocean_redis" {
   source                = "github.com/opsd-io/terraform-module-digitalocean-mysql?ref=1-create-redis-terraform-module"
   databasename          = "example-redis-cluster"
   engine                = "redis"
