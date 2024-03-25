@@ -1,9 +1,8 @@
-module "Digitalocean_redis" {
+module "Digitalocean_redis_example" {
   source                = "github.com/opsd-io/terraform-module-digitalocean-redis?ref=1-create-redis-terraform-module"
-  databasename          = "example-redis-cluster"
-  engine                = "redis"
-  version_of_engine     = "7"
-  redis_main_size       = "db-s-1vcpu-1gb"
+  cluster_name          = "example-redis-cluster"
+  redis_version         = "7"
+  node_size             = "db-s-1vcpu-1gb"
   region                = "nyc1"
   redis_main_node_count = 1
   common_tags           = ["production"]
