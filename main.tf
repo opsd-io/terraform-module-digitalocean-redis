@@ -25,6 +25,7 @@ resource "digitalocean_database_cluster" "main" {
   tags       = var.common_tags
 }
 resource "digitalocean_database_replica" "main_replica" {
+  count      = var.replica_enable ? 1 : 0
   cluster_id = digitalocean_database_cluster.main.id
   name       = var.replica_cluster_name
   size       = var.replica_node_size

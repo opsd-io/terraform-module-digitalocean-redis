@@ -48,3 +48,8 @@ variable "firewall_rules" {
   type        = set(string)
   default     = []
 }
+variable "replica_enable" {
+  type        = bool
+  default     = false
+  description = "Flag to control the replica creation."
+}

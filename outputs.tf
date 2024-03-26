@@ -52,5 +52,5 @@ output "firewall_id" {
 }
 output "replica_uuid" {
   description = "Replica UUID."
-  value       = digitalocean_database_replica.main_replica.uuid
+  value       = digitalocean_database_replica.main_replica[*].uuid
 }
