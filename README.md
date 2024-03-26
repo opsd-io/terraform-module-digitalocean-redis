@@ -64,12 +64,12 @@ No modules.
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A list of tag names to be applied to the database cluster. | `set(string)` | n/a | yes |
 | <a name="input_firewall_rules"></a> [firewall\_rules](#input\_firewall\_rules) | List of trusted sources associated with the cluster. | `set(string)` | `[]` | no |
 | <a name="input_node_count"></a> [node\_count](#input\_node\_count) | Number of redis nodes that will be created. | `number` | `1` | no |
-| <a name="input_node_size"></a> [node\_size](#input\_node\_size) | The redis node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
+| <a name="input_node_size"></a> [node\_size](#input\_node\_size) | The redis node instance size. | `string` | `"db-s-1vcpu-2gb"` | no |
 | <a name="input_redis_version"></a> [redis\_version](#input\_redis\_version) | Engine version used by the cluster. | `number` | `7` | no |
 | <a name="input_region"></a> [region](#input\_region) | DigitalOcean region where the cluster will reside. | `string` | n/a | yes |
 | <a name="input_replica_cluster_name"></a> [replica\_cluster\_name](#input\_replica\_cluster\_name) | The name of the replica database cluster. | `string` | n/a | yes |
 | <a name="input_replica_enable"></a> [replica\_enable](#input\_replica\_enable) | Flag to control the replica creation. | `bool` | `false` | no |
-| <a name="input_replica_node_size"></a> [replica\_node\_size](#input\_replica\_node\_size) | The redis replica node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
+| <a name="input_replica_node_size"></a> [replica\_node\_size](#input\_replica\_node\_size) | The redis replica node instance size. | `string` | `"db-s-1vcpu-2gb"` | no |
 | <a name="input_replica_region"></a> [replica\_region](#input\_replica\_region) | DigitalOcean replica region where the cluster will reside. | `string` | n/a | yes |
 
 ## Outputs

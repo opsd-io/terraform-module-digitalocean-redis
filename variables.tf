@@ -16,12 +16,12 @@ variable "node_count" {
 variable "node_size" {
   description = "The redis node instance size."
   type        = string
-  default     = "db-s-1vcpu-1gb"
+  default     = "db-s-1vcpu-2gb"
 }
 variable "replica_node_size" {
   description = "The redis replica node instance size."
   type        = string
-  default     = "db-s-1vcpu-1gb"
+  default     = "db-s-1vcpu-2gb"
 }
 variable "redis_version" {
   description = "Engine version used by the cluster."
