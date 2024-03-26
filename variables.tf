@@ -3,6 +3,11 @@ variable "cluster_name" {
   type        = string
   nullable    = false
 }
+variable "replica_cluster_name" {
+  description = "The name of the replica database cluster."
+  type        = string
+  nullable    = false
+}
 variable "node_count" {
   description = "Number of redis nodes that will be created."
   type        = number
@@ -13,6 +18,11 @@ variable "node_size" {
   type        = string
   default     = "db-s-1vcpu-1gb"
 }
+variable "replica_node_size" {
+  description = "The redis replica node instance size."
+  type        = string
+  default     = "db-s-1vcpu-1gb"
+}
 variable "redis_version" {
   description = "Engine version used by the cluster."
   type        = number
@@ -20,6 +30,11 @@ variable "redis_version" {
 }
 variable "region" {
   description = "DigitalOcean region where the cluster will reside."
+  type        = string
+  nullable    = false
+}
+variable "replica_region" {
+  description = "DigitalOcean replica region where the cluster will reside."
   type        = string
   nullable    = false
 }

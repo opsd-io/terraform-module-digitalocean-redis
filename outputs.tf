@@ -50,3 +50,7 @@ output "firewall_id" {
   description = "A unique identifier for the firewall."
   value       = digitalocean_database_firewall.main.id
 }
+output "replica_uuid" {
+  description = "Replica UUID."
+  value       = digitalocean_database_replica.main_replica.uuid
+}

@@ -54,6 +54,7 @@ No modules.
 | [digitalocean_database_cluster.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_cluster) | resource |
 | [digitalocean_database_firewall.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_firewall) | resource |
 | [digitalocean_database_redis_config.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_redis_config) | resource |
+| [digitalocean_database_replica.main_replica](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_replica) | resource |
 
 ## Inputs
 
@@ -66,6 +67,9 @@ No modules.
 | <a name="input_node_size"></a> [node\_size](#input\_node\_size) | The redis node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
 | <a name="input_redis_version"></a> [redis\_version](#input\_redis\_version) | Engine version used by the cluster. | `number` | `7` | no |
 | <a name="input_region"></a> [region](#input\_region) | DigitalOcean region where the cluster will reside. | `string` | n/a | yes |
+| <a name="input_replica_cluster_name"></a> [replica\_cluster\_name](#input\_replica\_cluster\_name) | The name of the replica database cluster. | `string` | n/a | yes |
+| <a name="input_replica_node_size"></a> [replica\_node\_size](#input\_replica\_node\_size) | The redis replica node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
+| <a name="input_replica_region"></a> [replica\_region](#input\_replica\_region) | DigitalOcean replica region where the cluster will reside. | `string` | n/a | yes |
 
 ## Outputs
 
@@ -81,6 +85,7 @@ No modules.
 | <a name="output_redis_main_port"></a> [redis\_main\_port](#output\_redis\_main\_port) | Network port that the database cluster is listening on. |
 | <a name="output_redis_main_private_uri"></a> [redis\_main\_private\_uri](#output\_redis\_main\_private\_uri) | Same as uri, but only accessible from resources within the account and in the same region. |
 | <a name="output_redis_main_uri"></a> [redis\_main\_uri](#output\_redis\_main\_uri) | The full URI for connecting to the database cluster. |
+| <a name="output_replica_uuid"></a> [replica\_uuid](#output\_replica\_uuid) | Replica UUID. |
 <!-- END_TF_DOCS -->
 
 ## Examples of usage

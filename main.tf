@@ -24,3 +24,9 @@ resource "digitalocean_database_cluster" "main" {
   node_count = var.node_count
   tags       = var.common_tags
 }
+resource "digitalocean_database_replica" "main_replica" {
+  cluster_id = digitalocean_database_cluster.main.id
+  name       = var.replica_cluster_name
+  size       = var.replica_node_size
+  region     = var.replica_region
+}
