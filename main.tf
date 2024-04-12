@@ -14,7 +14,9 @@ resource "digitalocean_database_redis_config" "main" {
   notify_keyspace_events = "KEA"
   timeout                = 90
 }
+
 resource "digitalocean_database_firewall" "main" {
+
   cluster_id = digitalocean_database_cluster.main.id
 
   dynamic "rule" {
@@ -25,6 +27,7 @@ resource "digitalocean_database_firewall" "main" {
     }
   }
 }
+
 resource "digitalocean_database_cluster" "main" {
   name       = var.cluster_name
   engine     = "redis"

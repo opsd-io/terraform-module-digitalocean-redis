@@ -15,7 +15,8 @@ What does the module provide?
 ## Usage
 
 ```hcl
-module "terraform-module-digitalocean-redis" {
+module "example" {
+  source = "github.com/opsd-io/terraform-module-digitalocean-redis?ref=main"
 
   databasename          = "example-redis-cluster"
   redis_version         = "7"
@@ -71,16 +72,16 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_cluster_default_database"></a> [cluster\_default\_database](#output\_cluster\_default\_database) | Name of the cluster's default database. |
+| <a name="output_cluster_default_user"></a> [cluster\_default\_user](#output\_cluster\_default\_user) | Username for the cluster's default user. |
+| <a name="output_cluster_default_user_password"></a> [cluster\_default\_user\_password](#output\_cluster\_default\_user\_password) | Password for the cluster's default user. |
+| <a name="output_cluster_host"></a> [cluster\_host](#output\_cluster\_host) | Database cluster's hostname. |
+| <a name="output_cluster_id"></a> [cluster\_id](#output\_cluster\_id) | The ID of the database cluster. |
+| <a name="output_cluster_main_uri"></a> [cluster\_main\_uri](#output\_cluster\_main\_uri) | The full URI for connecting to the database cluster. |
+| <a name="output_cluster_port"></a> [cluster\_port](#output\_cluster\_port) | Network port that the database cluster is listening on. |
+| <a name="output_cluster_private_host"></a> [cluster\_private\_host](#output\_cluster\_private\_host) | Same as host, but only accessible from resources within the account and in the same region. |
+| <a name="output_cluster_private_uri"></a> [cluster\_private\_uri](#output\_cluster\_private\_uri) | Same as uri, but only accessible from resources within the account and in the same region. |
 | <a name="output_firewall_id"></a> [firewall\_id](#output\_firewall\_id) | A unique identifier for the firewall. |
-| <a name="output_main_default_database"></a> [main\_default\_database](#output\_main\_default\_database) | Name of the cluster's default database. |
-| <a name="output_main_default_user"></a> [main\_default\_user](#output\_main\_default\_user) | Username for the cluster's default user. |
-| <a name="output_main_default_user_password"></a> [main\_default\_user\_password](#output\_main\_default\_user\_password) | Password for the cluster's default user. |
-| <a name="output_main_host"></a> [main\_host](#output\_main\_host) | Database cluster's hostname. |
-| <a name="output_main_host_id"></a> [main\_host\_id](#output\_main\_host\_id) | The ID of the database cluster. |
-| <a name="output_main_private_host"></a> [main\_private\_host](#output\_main\_private\_host) | Same as host, but only accessible from resources within the account and in the same region. |
-| <a name="output_redis_main_port"></a> [redis\_main\_port](#output\_redis\_main\_port) | Network port that the database cluster is listening on. |
-| <a name="output_redis_main_private_uri"></a> [redis\_main\_private\_uri](#output\_redis\_main\_private\_uri) | Same as uri, but only accessible from resources within the account and in the same region. |
-| <a name="output_redis_main_uri"></a> [redis\_main\_uri](#output\_redis\_main\_uri) | The full URI for connecting to the database cluster. |
 <!-- END_TF_DOCS -->
 
 ## Examples of usage
