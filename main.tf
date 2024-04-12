@@ -1,5 +1,6 @@
 terraform {
   required_version = ">= 1.5.5"
+
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
@@ -9,6 +10,7 @@ terraform {
 }
 
 resource "digitalocean_database_redis_config" "main" {
+
   cluster_id             = digitalocean_database_cluster.main.id
   maxmemory_policy       = "allkeys-lru"
   notify_keyspace_events = "KEA"
@@ -29,6 +31,7 @@ resource "digitalocean_database_firewall" "main" {
 }
 
 resource "digitalocean_database_cluster" "main" {
+
   name       = var.cluster_name
   engine     = "redis"
   version    = var.redis_version
