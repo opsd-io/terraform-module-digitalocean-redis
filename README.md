@@ -35,13 +35,13 @@ module "terraform-module-digitalocean-redis" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.5 |
-| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | 2.34.1 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >=2.34.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | 2.34.1 |
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >=2.34.1 |
 
 ## Modules
 
@@ -51,16 +51,16 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [digitalocean_database_cluster.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_cluster) | resource |
-| [digitalocean_database_firewall.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_firewall) | resource |
-| [digitalocean_database_redis_config.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/database_redis_config) | resource |
+| [digitalocean_database_cluster.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_cluster) | resource |
+| [digitalocean_database_firewall.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_firewall) | resource |
+| [digitalocean_database_redis_config.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/database_redis_config) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | The name of the database cluster. | `string` | n/a | yes |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A list of tag names to be applied to the database cluster. | `set(string)` | n/a | yes |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A list of tag names to be applied to the database cluster. | `set(string)` | `[]` | no |
 | <a name="input_firewall_rules"></a> [firewall\_rules](#input\_firewall\_rules) | List of trusted sources associated with the cluster. | `set(string)` | `[]` | no |
 | <a name="input_node_count"></a> [node\_count](#input\_node\_count) | Number of redis nodes that will be created. | `number` | `1` | no |
 | <a name="input_node_size"></a> [node\_size](#input\_node\_size) | The redis node instance size. | `string` | `"db-s-1vcpu-1gb"` | no |
