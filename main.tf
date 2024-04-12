@@ -1,3 +1,13 @@
+terraform {
+  required_version = ">= 1.5.5"
+  required_providers {
+    digitalocean = {
+      source  = "digitalocean/digitalocean"
+      version = ">= 2.34.1"
+    }
+  }
+}
+
 resource "digitalocean_database_redis_config" "main" {
   cluster_id             = digitalocean_database_cluster.main.id
   maxmemory_policy       = "allkeys-lru"
